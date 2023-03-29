@@ -1,0 +1,14 @@
+{
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+	"editor.tabSize": 2,
+	"lldb.displayFormat": "auto",
+	"lldb.showDisassembly": "auto",
+	"lldb.dereferencePointers": true,
+	"lldb.consoleMode": "commands",
+	"debug.allowBreakpointsEverywhere": true,
+  "search.exclude": {
+    ".build": true,
+    "co-framework.xcodeproj": true
+  }
+}
