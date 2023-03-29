@@ -1,10 +1,11 @@
 setopt +o nullglob
-rm -rf .build/*
+rm -rf .build
+mkdir .build
 
-for file in ./a9-game/**/*.S; do
+for file in ./**/*.S; do
 	gcc -g -c \
-    --include ./a9-game/raylib-constants.S \
-    --include ./a9-game/src/constants.S \
+    --include ./raylib-constants.S \
+    --include ./src/constants.S \
     $file \
     -o ".build/a9-${file:t:s/.S/.o}" \
     || exit 1
@@ -13,5 +14,5 @@ done
 gcc \
 	`pkg-config --libs --cflags raylib` \
 	.build/a9-*.o \
-	./a9-game/**/*.c \
+	./src/c-interop/**/*.c \
 	-o .build/bin || exit 1

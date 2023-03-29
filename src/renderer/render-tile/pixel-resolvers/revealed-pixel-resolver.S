@@ -10,9 +10,9 @@ revealed_tile_pixel_resolver:
   cmpq $3, %rsi
   jle _dark
 
-  movq $0xFFBDBDBD, %rdx
+  movq $0xFFBDBDBD, %rdx        # 0xBDBDBD for tile face
   ret
 
   _dark:
-    movq $0xFF8C8C8C, %rdx
+    movq $0xFF8C8C8C, %rdx      # 0x8C8C8C for top, left border
     ret

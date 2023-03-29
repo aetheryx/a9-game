@@ -1,5 +1,3 @@
-.text
-
 .global render_generic_tile
 
 ## render_generic_tile(
