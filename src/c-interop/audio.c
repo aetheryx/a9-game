@@ -13,5 +13,5 @@ void init_audio() {
 }
 
 void play_audio(int sound) {
-  PlaySoundMulti(sounds[sound]);
+  PlaySound(sounds[sound]);
 }
